@@ -1,0 +1,8 @@
+${AnsiColor.GREEN}  888888888888  88  88888888888                        ad88888ba
+${AnsiColor.GREEN}      88       ""  88                                d8"     "8b
+${AnsiColor.GREEN}      88           88                                Y8,
+${AnsiColor.GREEN}      88       88  88aaaaa   ,adPPYba,   8b,dPPYba,  `Y8aaaaa,
+${AnsiColor.GREEN}      88       88  88"""""  a8"     "8a  88P'   "Y8    `"""""8b,
+${AnsiColor.GREEN}      88       88  88       8b       d8  88                  `8b
+${AnsiColor.GREEN}      88       88  88       "8a,   ,a8"  88          Y8a     a8P
+${AnsiColor.GREEN}      88       88  88        `"YbbdP"'   88           "Y88888P"

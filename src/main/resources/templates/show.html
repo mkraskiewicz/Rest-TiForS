@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Show Vendor</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
+          th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}">
+
+    <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous" th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+</head>
+<!--/*@thymesVar id="vendor" type="com.tfors.domain.Vendor"*/-->
+<body>
+    <div class="container-fluid" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel-group">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h1 class="panel-title">Vendor Information</h1>
+                                </div>
+                                <div class="col-md-1">
+                                    <a class="btn btn-default" href="#"
+                                       th:href="@{'/api/v1/vendors/' + ${vendor.getId()} + '/image'}" role="button">Change Image</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <img
+                                 th:src="@{'/api/v1/vendors/' + ${vendor.getId()} + '/vendorimage'}"
+                                 width="200" height="200">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h5>Name:</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <p th:text="${(vendor.getName())}"></p>
+                            </div>
+                            <div class="col-md-3">
+                                <h5>Stars:</h5>
+                            </div>
+                            <div class="col-md-3">
+                                <p th:text="${vendor.getStars()}">Easy</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                Description:</h5>
+                            </div>
+                            <div class="col-md-9">
+                                <p th:text="${(vendor.getDescription())}"></p>
+                            </div>
+                        </div>
+
+
+
+                </div>
+
+
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
